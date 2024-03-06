@@ -72,6 +72,18 @@ public class Wallet {
         }
     }
 
+    public void resetMoney(){
+        this.coins = new HashMap<>();
+        for (int coinType : coinTypes) {
+            this.coins.put(coinType, 0);
+        }
+
+        this.moneys = new HashMap<>();
+        for (int moneyType : moneyTypes) {
+            this.moneys.put(moneyType, 0);
+        }
+    }
+
     public void addCoin(Integer coinType) {
         boolean isCoinValid = false;
 
